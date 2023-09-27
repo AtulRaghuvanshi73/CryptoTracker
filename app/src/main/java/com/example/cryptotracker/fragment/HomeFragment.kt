@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import com.example.cryptotracker.R
+import com.example.cryptotracker.adapter.TopMarketAdapter
 import com.example.cryptotracker.apis.ApiInterface
 import com.example.cryptotracker.apis.ApiUtilities
 import com.example.cryptotracker.databinding.FragmentHomeBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class HomeFragment : Fragment() {
@@ -33,6 +35,10 @@ class HomeFragment : Fragment() {
     private fun getTopCurrencyList() {
         lifecycleScope.launch(Dispatchers.IO){
             val res = ApiUtilities.getInstance().create(ApiInterface::class.java).getMarketData()
+
+            withContext(Dispatchers.Main){
+                binding.topCurrencyRecyclerView.adapter = TopMarketAdapter(requireContext(), res.body()!!.data.cryptoCurrencyList)
+            }
 
             Log.d("SHUBH", "getTopCurrencyList: ${res.body()!!.data.cryptoCurrencyList}")
         }
