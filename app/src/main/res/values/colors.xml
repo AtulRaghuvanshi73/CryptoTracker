@@ -5,8 +5,8 @@
     <color name="navbar_bottom_background">#2E4374</color>
     <color name="my_light_primary">#82A0D8</color>
     <color name="my_dark_primary">#FF6969</color>
-    <color name = "royal_blue_dark">#B9EDDD</color>
+    <color name = "royal_blue_dark">#205295</color>
     <color name="purple" >#071952</color>
     <color name="dark_purple">#27005D</color>
-    <color name="dark_blue">#0E21A0</color>
+    <color name="dark_blue">#00235B</color>
 </resources>
