@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.cryptotracker.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detialsFragment"
+            app:destination="@id/detialsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/marketFragment"
@@ -22,5 +26,9 @@
         android:name="com.example.cryptotracker.fragment.WatchListFragment"
         android:label="fragment_watch_list"
         tools:layout="@layout/fragment_watch_list" />
+    <fragment
+        android:id="@+id/detialsFragment"
+        android:name="com.example.cryptotracker.fragment.DetialsFragment"
+        android:label="DetialsFragment" />
 
 </navigation>
