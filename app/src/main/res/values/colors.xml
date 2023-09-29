@@ -11,4 +11,5 @@
     <color name="dark_blue">#00235B</color>
     <color name="green">#A0D8B3</color>
     <color name="red">#C70039</color>
+    <color name = "top_losers_bg">#22668D</color>
 </resources>

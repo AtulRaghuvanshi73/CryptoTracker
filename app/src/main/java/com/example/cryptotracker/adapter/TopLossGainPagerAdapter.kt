@@ -1,15 +1,21 @@
 package com.example.cryptotracker.adapter
 
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.cryptotracker.fragment.TopLossGainFragment
 
 class TopLossGainPagerAdapter(fragment : Fragment) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return 2
     }
 
     override fun createFragment(position: Int): Fragment {
-        TODO("Not yet implemented")
+        val fragment = TopLossGainFragment()
+        val bundle = Bundle()
+        bundle.putInt("position", position)
+        fragment.arguments = bundle
+        return fragment
     }
 
 }

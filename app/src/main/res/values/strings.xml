@@ -11,4 +11,5 @@
     <string name="_4h">4 Hour</string>
     <string name ="_1d">1 Day</string>
     <string name="_1w">1 Week</string>
+    <string name="random">random string output</string>
 </resources>
